@@ -12,6 +12,7 @@
 		4513629D2953ADE40000D539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4513629C2953ADE40000D539 /* Assets.xcassets */; };
 		451362A02953ADE40000D539 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4513629F2953ADE40000D539 /* Preview Assets.xcassets */; };
 		451362A72953ADFF0000D539 /* StemPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */; };
+		453CF0F02954D65900434B2D /* StemSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0EF2954D65900434B2D /* StemSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4513629C2953ADE40000D539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4513629F2953ADE40000D539 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemPlayerViewModel.swift; sourceTree = "<group>"; };
+		453CF0EF2954D65900434B2D /* StemSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				451362982953ADE30000D539 /* STEMPLAYERApp.swift */,
 				4513629A2953ADE30000D539 /* ContentView.swift */,
+				453CF0EF2954D65900434B2D /* StemSliderView.swift */,
 				451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */,
 				4513629C2953ADE40000D539 /* Assets.xcassets */,
 				4513629E2953ADE40000D539 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				451362A72953ADFF0000D539 /* StemPlayerViewModel.swift in Sources */,
 				4513629B2953ADE30000D539 /* ContentView.swift in Sources */,
+				453CF0F02954D65900434B2D /* StemSliderView.swift in Sources */,
 				451362992953ADE30000D539 /* STEMPLAYERApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,8 +281,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,8 +309,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
