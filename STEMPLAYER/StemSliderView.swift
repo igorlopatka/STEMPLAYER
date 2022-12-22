@@ -10,7 +10,7 @@ import SwiftUI
 
 struct StemSliderView: View {
     
-    var player: AVPlayer
+    var player: AVAudioPlayer
     
     var body: some View {
         Slider(value: Binding(get: {
