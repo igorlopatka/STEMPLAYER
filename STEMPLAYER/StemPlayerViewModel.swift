@@ -11,7 +11,8 @@ import SwiftUI
 @MainActor class StemPlayerViewModel: ObservableObject {
     
     @Published var importedFiles: [URL] = []
-    @Published var audioPlayers: [AVAudioPlayer] = []
+//    @Published var audioPlayers: [AVAudioPlayer] = []
+    @Published var tracks: [Track] = []
     
     func importFiles(results: [Result<URL, Error>]) {
         for result in results {
@@ -25,11 +26,11 @@ import SwiftUI
     }
     
     func playAllTracks() {
-        audioPlayers.forEach { $0.play() }
+        tracks.forEach { $0.player.play() }
     }
     
     func pauseAllTracks() {
-        audioPlayers.forEach { $0.pause() }
+        tracks.forEach { $0.player.pause() }
     }
     
     
@@ -37,7 +38,8 @@ import SwiftUI
         for file in importedFiles {
             do {
                 let player = try AVAudioPlayer(contentsOf: file)
-                audioPlayers.append(player)
+                let track = Track(player: player, url: file)
+                tracks.append(track)
             } catch {
                 print(error.localizedDescription)
             }

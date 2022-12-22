@@ -40,8 +40,8 @@ struct ContentView: View {
                 .padding()
             }
             VStack {
-                for track in stem.audioPlayers {
-                    
+                ForEach(stem.tracks) { track in
+                    StemSliderView(player: track.player)
                 }
             }
         }
