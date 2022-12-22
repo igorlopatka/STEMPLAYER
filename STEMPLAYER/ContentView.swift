@@ -39,10 +39,16 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            VStack {
-                ForEach(stem.tracks) { track in
-                    StemSliderView(player: track.player)
+    
+            if stem.tracks != [] {
+                VStack {
+                    ForEach(stem.tracks) { track in
+                        StemSliderView(player: track.player)
+                    }
                 }
+            } else {
+                Text("Add tracks via file importer to start.")
+                    .bold()
             }
         }
         .fileImporter(isPresented: $isUploadingFiles,

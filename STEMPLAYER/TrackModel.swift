@@ -8,7 +8,7 @@
 import AVFoundation
 import Foundation
 
-struct TrackModel: Identifiable {
+struct TrackModel: Identifiable, Equatable {
     
     let id = UUID()
     let player: AVAudioPlayer
