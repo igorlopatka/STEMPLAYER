@@ -23,7 +23,7 @@ struct ContentView: View {
             
             VStack {
                 Button(action: {
-                    
+                    stem.playAllTracks()
                 }) {
                     Image(systemName: "play.circle.fill").resizable().rotationEffect(Angle.degrees(90))
                         .frame(width: 50, height: 50)
@@ -31,13 +31,18 @@ struct ContentView: View {
                 }
                 .padding()
                 Button(action: {
-                    
+                    stem.pauseAllTracks()
                 }) {
                     Image(systemName: "pause.circle.fill").resizable().rotationEffect(Angle.degrees(90))
                         .frame(width: 50, height: 50)
                         .aspectRatio(contentMode: .fit)
                 }
                 .padding()
+            }
+            VStack {
+                for track in stem.audioPlayers {
+                    
+                }
             }
         }
         .fileImporter(isPresented: $isUploadingFiles,

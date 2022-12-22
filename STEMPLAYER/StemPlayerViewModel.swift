@@ -24,6 +24,15 @@ import SwiftUI
         }
     }
     
+    func playAllTracks() {
+        audioPlayers.forEach { $0.play() }
+    }
+    
+    func pauseAllTracks() {
+        audioPlayers.forEach { $0.pause() }
+    }
+    
+    
     func createTracks() {
         for file in importedFiles {
             do {
