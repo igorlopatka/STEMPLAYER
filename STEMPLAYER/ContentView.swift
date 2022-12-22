@@ -8,14 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var stem = StemPlayerViewModel()
+    @State private var isUploadingFiles = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        HStack{
+            Button {
+                isUploadingFiles = true
+            } label: {
+                Text("Upload")
+            }
+            
+            VStack {
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "play.circle.fill").resizable().rotationEffect(Angle.degrees(90))
+                        .frame(width: 50, height: 50)
+                        .aspectRatio(contentMode: .fit)
+                }
+                .padding()
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "pause.circle.fill").resizable().rotationEffect(Angle.degrees(90))
+                        .frame(width: 50, height: 50)
+                        .aspectRatio(contentMode: .fit)
+                }
+                .padding()
+            }
         }
-        .padding()
+        .fileImporter(isPresented: $isUploadingFiles,
+                      allowedContentTypes: [.audio],
+                      allowsMultipleSelection: true) { result in
+            if let urls = try? result.get() {
+                for url in urls {
+                    let url = url
+                    stem.importedFiles.append(url)
+                    print(stem.importedFiles)
+                }
+            }
+        }
     }
 }
 
@@ -24,3 +58,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
