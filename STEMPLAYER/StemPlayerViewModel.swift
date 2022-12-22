@@ -11,8 +11,7 @@ import SwiftUI
 @MainActor class StemPlayerViewModel: ObservableObject {
     
     @Published var importedFiles: [URL] = []
-//    @Published var audioPlayers: [AVAudioPlayer] = []
-    @Published var tracks: [Track] = []
+    @Published var tracks: [TrackModel] = []
     
     func importFiles(results: [Result<URL, Error>]) {
         for result in results {
@@ -38,7 +37,7 @@ import SwiftUI
         for file in importedFiles {
             do {
                 let player = try AVAudioPlayer(contentsOf: file)
-                let track = Track(player: player, url: file)
+                let track = TrackModel(player: player, url: file)
                 tracks.append(track)
             } catch {
                 print(error.localizedDescription)

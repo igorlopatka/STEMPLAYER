@@ -13,7 +13,7 @@
 		451362A02953ADE40000D539 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4513629F2953ADE40000D539 /* Preview Assets.xcassets */; };
 		451362A72953ADFF0000D539 /* StemPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */; };
 		453CF0F02954D65900434B2D /* StemSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0EF2954D65900434B2D /* StemSliderView.swift */; };
-		453CF0F42954E2E200434B2D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0F32954E2E200434B2D /* Track.swift */; };
+		453CF0F42954E2E200434B2D /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0F32954E2E200434B2D /* TrackModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		4513629F2953ADE40000D539 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemPlayerViewModel.swift; sourceTree = "<group>"; };
 		453CF0EF2954D65900434B2D /* StemSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemSliderView.swift; sourceTree = "<group>"; };
-		453CF0F32954E2E200434B2D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		453CF0F32954E2E200434B2D /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				451362982953ADE30000D539 /* STEMPLAYERApp.swift */,
 				4513629A2953ADE30000D539 /* ContentView.swift */,
 				453CF0EF2954D65900434B2D /* StemSliderView.swift */,
-				453CF0F32954E2E200434B2D /* Track.swift */,
+				453CF0F32954E2E200434B2D /* TrackModel.swift */,
 				451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */,
 				4513629C2953ADE40000D539 /* Assets.xcassets */,
 				4513629E2953ADE40000D539 /* Preview Content */,
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451362A72953ADFF0000D539 /* StemPlayerViewModel.swift in Sources */,
-				453CF0F42954E2E200434B2D /* Track.swift in Sources */,
+				453CF0F42954E2E200434B2D /* TrackModel.swift in Sources */,
 				4513629B2953ADE30000D539 /* ContentView.swift in Sources */,
 				453CF0F02954D65900434B2D /* StemSliderView.swift in Sources */,
 				451362992953ADE30000D539 /* STEMPLAYERApp.swift in Sources */,
