@@ -5,6 +5,7 @@
 //  Created by Igor Łopatka on 21/12/2022.
 //
 
+import AVFoundation
 import SwiftUI
 
 struct ContentView: View {
@@ -46,9 +47,11 @@ struct ContentView: View {
                 for url in urls {
                     let url = url
                     stem.importedFiles.append(url)
-                    print(stem.importedFiles)
                 }
             }
+        }
+        .onChange(of: stem.importedFiles) { _ in
+            stem.createTracks()
         }
     }
 }

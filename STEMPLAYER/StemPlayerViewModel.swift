@@ -23,4 +23,15 @@ import SwiftUI
             }
         }
     }
+    
+    func createTracks() {
+        for file in importedFiles {
+            do {
+                let player = try AVAudioPlayer(contentsOf: file)
+                audioPlayers.append(player)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
