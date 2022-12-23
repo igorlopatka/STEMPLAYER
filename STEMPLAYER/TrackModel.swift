@@ -12,6 +12,7 @@ struct TrackModel: Identifiable, Equatable {
     
     let id = UUID()
     let player: AVAudioPlayer
+    let item: AVPlayerItem
     let url: URL
     
 }

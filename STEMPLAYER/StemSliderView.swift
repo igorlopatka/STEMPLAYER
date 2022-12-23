@@ -20,9 +20,3 @@ struct StemSliderView: View {
         }))
     }
 }
-
-//struct StemSliderView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StemSliderView()
-//    }
-//}

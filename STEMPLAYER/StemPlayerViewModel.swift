@@ -37,7 +37,8 @@ import SwiftUI
         for file in importedFiles {
             do {
                 let player = try AVAudioPlayer(contentsOf: file)
-                let track = TrackModel(player: player, url: file)
+                let playerItem: AVPlayerItem = AVPlayerItem(url: file)
+                let track = TrackModel(player: player, item: playerItem, url: file)
                 tracks.append(track)
             } catch {
                 print(error.localizedDescription)
