@@ -32,7 +32,6 @@ import SwiftUI
         tracks.forEach { $0.player.pause() }
     }
     
-    
     func createTracks() {
         for file in importedFiles {
             do {

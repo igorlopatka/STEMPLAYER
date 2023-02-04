@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @StateObject var stem = StemPlayerViewModel()
     @State private var isUploadingFiles = false
+    @State private var filesLoaded = false
     
     var body: some View {
         HStack{
@@ -40,14 +41,14 @@ struct ContentView: View {
                 .padding()
             }
     
-            if stem.tracks != [] {
+            if filesLoaded {
                 VStack {
                     ForEach(stem.tracks) { track in
                         StemSliderView(player: track.player)
                     }
                 }
             } else {
-                Text("Add tracks via file importer to start.")
+                Text("Upload tracks via file importer to start.")
                     .bold()
             }
         }
@@ -63,6 +64,9 @@ struct ContentView: View {
         }
         .onChange(of: stem.importedFiles) { _ in
             stem.createTracks()
+            if stem.importedFiles.isEmpty == false {
+                filesLoaded = true
+            }
         }
     }
 }
