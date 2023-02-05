@@ -10,13 +10,16 @@ import SwiftUI
 
 struct StemSliderView: View {
     
-    var player: AVAudioPlayer
+    var track: TrackModel
     
     var body: some View {
-        Slider(value: Binding(get: {
-            player.volume
-        }, set: { (newVal) in
-            player.volume = newVal
-        }))
+        VStack {
+            Text(track.fileName)
+            Slider(value: Binding(get: {
+                track.player.volume
+            }, set: { (newVal) in
+                track.player.volume = newVal
+            }))
+        }
     }
 }

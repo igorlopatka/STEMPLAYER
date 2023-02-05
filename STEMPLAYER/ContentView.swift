@@ -46,7 +46,7 @@ struct ContentView: View {
             if filesLoaded {
                 VStack {
                     ForEach(stem.tracks) { track in
-                        StemSliderView(player: track.player)
+                        StemSliderView(track: track)
                     }
                 }
             } else {
