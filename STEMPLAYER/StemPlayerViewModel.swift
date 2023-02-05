@@ -37,7 +37,7 @@ import SwiftUI
             do {
                 let player = try AVAudioPlayer(contentsOf: file)
                 let playerItem: AVPlayerItem = AVPlayerItem(url: file)
-                let track = TrackModel(player: player, item: playerItem, url: file)
+                let track = TrackModel(fileName: file.lastPathComponent, player: player, item: playerItem, url: file)
                 tracks.append(track)
             } catch {
                 print(error.localizedDescription)

@@ -11,8 +11,8 @@ import Foundation
 struct TrackModel: Identifiable, Equatable {
     
     let id = UUID()
+    let fileName: String
     let player: AVAudioPlayer
     let item: AVPlayerItem
     let url: URL
-    
 }
