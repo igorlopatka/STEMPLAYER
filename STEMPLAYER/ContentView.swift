@@ -30,6 +30,7 @@ struct ContentView: View {
                         .frame(width: 50, height: 50)
                         .aspectRatio(contentMode: .fit)
                 }
+                .disabled(!filesLoaded)
                 .padding()
                 Button(action: {
                     stem.pauseAllTracks()
@@ -38,6 +39,7 @@ struct ContentView: View {
                         .frame(width: 50, height: 50)
                         .aspectRatio(contentMode: .fit)
                 }
+                .disabled(!filesLoaded)
                 .padding()
             }
     
@@ -48,7 +50,7 @@ struct ContentView: View {
                     }
                 }
             } else {
-                Text("Upload tracks via file importer to start.")
+                Text("Upload tracks to start.")
                     .bold()
             }
         }
