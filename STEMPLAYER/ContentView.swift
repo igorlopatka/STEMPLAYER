@@ -58,6 +58,7 @@ struct ContentView: View {
                       allowedContentTypes: [.audio],
                       allowsMultipleSelection: true) { result in
             if let urls = try? result.get() {
+                stem.importedFiles = []
                 for url in urls {
                     let url = url
                     url.startAccessingSecurityScopedResource()

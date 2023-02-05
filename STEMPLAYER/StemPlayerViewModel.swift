@@ -33,6 +33,7 @@ import SwiftUI
     }
     
     func createTracks() {
+        clearTracks()
         for file in importedFiles {
             do {
                 let player = try AVAudioPlayer(contentsOf: file)
@@ -43,5 +44,9 @@ import SwiftUI
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func clearTracks() {
+        tracks = []
     }
 }
