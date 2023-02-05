@@ -60,6 +60,7 @@ struct ContentView: View {
             if let urls = try? result.get() {
                 for url in urls {
                     let url = url
+                    url.startAccessingSecurityScopedResource()
                     stem.importedFiles.append(url)
                 }
             }
