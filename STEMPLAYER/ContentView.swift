@@ -24,19 +24,23 @@ struct ContentView: View {
             
             VStack {
                 Button(action: {
-                    stem.playAllTracks()
+                    stem.togglePlayStatus()
                 }) {
-                    Image(systemName: "play.circle.fill").resizable().rotationEffect(Angle.degrees(90))
+                    Image(systemName: stem.isPlaying ? "pause.fill" : "play.fill")
+                        .resizable()
+                        .rotationEffect(Angle.degrees(90))
                         .frame(width: 50, height: 50)
                         .aspectRatio(contentMode: .fit)
                 }
                 .disabled(!filesLoaded)
                 .padding()
                 Button(action: {
-                    stem.pauseAllTracks()
+                    stem.stopAllTracks()
                 }) {
-                    Image(systemName: "pause.circle.fill").resizable().rotationEffect(Angle.degrees(90))
-                        .frame(width: 50, height: 50)
+                    Image(systemName: "stop.fill")
+                        .resizable()
+                        .rotationEffect(Angle.degrees(90))
+                        .frame(width: 45, height: 45)
                         .aspectRatio(contentMode: .fit)
                 }
                 .disabled(!filesLoaded)
@@ -57,14 +61,7 @@ struct ContentView: View {
         .fileImporter(isPresented: $isUploadingFiles,
                       allowedContentTypes: [.audio],
                       allowsMultipleSelection: true) { result in
-            if let urls = try? result.get() {
-                stem.importedFiles = []
-                for url in urls {
-                    let url = url
-                    url.startAccessingSecurityScopedResource()
-                    stem.importedFiles.append(url)
-                }
-            }
+            stem.importFiles(result: result)
         }
         .onChange(of: stem.importedFiles) { _ in
             stem.createTracks()
