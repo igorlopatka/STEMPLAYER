@@ -15,20 +15,24 @@ struct ContentView: View {
     @State private var filesLoaded = false
     
     var body: some View {
-        HStack{
-            Button {
-                isUploadingFiles = true
-            } label: {
-                Text("Upload")
+        VStack {
+            if filesLoaded {
+                VStack {
+                    ForEach(stem.tracks) { track in
+                        StemSliderView(track: track)
+                    }
+                }
+            } else {
+                Text("Upload tracks to start.")
+                    .bold()
             }
             
-            VStack {
+            HStack {
                 Button(action: {
                     stem.togglePlayStatus()
                 }) {
                     Image(systemName: stem.isPlaying ? "pause.fill" : "play.fill")
                         .resizable()
-                        .rotationEffect(Angle.degrees(90))
                         .frame(width: 50, height: 50)
                         .aspectRatio(contentMode: .fit)
                 }
@@ -39,7 +43,6 @@ struct ContentView: View {
                 }) {
                     Image(systemName: "stop.fill")
                         .resizable()
-                        .rotationEffect(Angle.degrees(90))
                         .frame(width: 45, height: 45)
                         .aspectRatio(contentMode: .fit)
                 }
@@ -47,15 +50,10 @@ struct ContentView: View {
                 .padding()
             }
     
-            if filesLoaded {
-                VStack {
-                    ForEach(stem.tracks) { track in
-                        StemSliderView(track: track)
-                    }
-                }
-            } else {
-                Text("Upload tracks to start.")
-                    .bold()
+            Button {
+                isUploadingFiles = true
+            } label: {
+                Text("Upload")
             }
         }
         .fileImporter(isPresented: $isUploadingFiles,

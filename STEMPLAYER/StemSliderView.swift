@@ -13,13 +13,11 @@ struct StemSliderView: View {
     var track: TrackModel
     
     var body: some View {
-        VStack {
-            Text(track.fileName)
-            Slider(value: Binding(get: {
-                track.player.volume
-            }, set: { (newVal) in
-                track.player.volume = newVal
-            }))
-        }
+        Text(track.fileName)
+        Slider(value: Binding(get: {
+            track.player.volume
+        }, set: { (newVal) in
+            track.player.volume = newVal
+        }))
     }
 }
