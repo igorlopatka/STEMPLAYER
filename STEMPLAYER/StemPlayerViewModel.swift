@@ -10,26 +10,42 @@ import SwiftUI
 
 @MainActor class StemPlayerViewModel: ObservableObject {
     
-    @Published var importedFiles: [URL] = []
-    @Published var tracks: [TrackModel] = []
+    @Published private(set) var importedFiles: [URL] = []
+    @Published private(set) var tracks: [TrackModel] = []
+    @Published private(set) var isPlaying = false
     
-    func importFiles(results: [Result<URL, Error>]) {
-        for result in results {
-            switch result {
-            case .success(let url):
+    func importFiles(result: Result<[URL], Error>) {
+        resetImportedFiles()
+        
+        if let urls = try? result.get() {
+            for url in urls {
+                let url = url
+                url.startAccessingSecurityScopedResource()
                 importedFiles.append(url)
-            case .failure(let error):
-                print(error)
             }
         }
     }
     
+    func togglePlayStatus() {
+        isPlaying ? pauseAllTracks() : playAllTracks()
+    }
+    
     func playAllTracks() {
         tracks.forEach { $0.player.play() }
+        isPlaying = true
     }
     
     func pauseAllTracks() {
         tracks.forEach { $0.player.pause() }
+        isPlaying = false
+    }
+    
+    func stopAllTracks() {
+        tracks.forEach {
+            $0.player.stop()
+            $0.player.currentTime = 0.0
+        }
+        isPlaying = false
     }
     
     func createTracks() {
@@ -47,5 +63,9 @@ import SwiftUI
     
     func clearTracks() {
         tracks = []
+    }
+    
+    func resetImportedFiles() {
+        importedFiles = []
     }
 }
