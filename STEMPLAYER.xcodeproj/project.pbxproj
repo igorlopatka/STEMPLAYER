@@ -14,6 +14,7 @@
 		451362A72953ADFF0000D539 /* StemPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */; };
 		453CF0F02954D65900434B2D /* StemSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0EF2954D65900434B2D /* StemSliderView.swift */; };
 		453CF0F42954E2E200434B2D /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0F32954E2E200434B2D /* TrackModel.swift */; };
+		459743302991A59800D7E944 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4597432F2991A59800D7E944 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemPlayerViewModel.swift; sourceTree = "<group>"; };
 		453CF0EF2954D65900434B2D /* StemSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemSliderView.swift; sourceTree = "<group>"; };
 		453CF0F32954E2E200434B2D /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
+		4597432F2991A59800D7E944 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				453CF0EF2954D65900434B2D /* StemSliderView.swift */,
 				453CF0F32954E2E200434B2D /* TrackModel.swift */,
 				451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */,
+				4597432F2991A59800D7E944 /* Colors.xcassets */,
 				4513629C2953ADE40000D539 /* Assets.xcassets */,
 				4513629E2953ADE40000D539 /* Preview Content */,
 			);
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459743302991A59800D7E944 /* Colors.xcassets in Resources */,
 				451362A02953ADE40000D539 /* Preview Assets.xcassets in Resources */,
 				4513629D2953ADE40000D539 /* Assets.xcassets in Resources */,
 			);

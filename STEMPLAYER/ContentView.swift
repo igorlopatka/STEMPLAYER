@@ -16,6 +16,12 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+
+                Image("logo_dark")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50)
+            
             if filesLoaded {
                 VStack {
                     ForEach(stem.tracks) { track in
