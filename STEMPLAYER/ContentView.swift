@@ -24,8 +24,8 @@ struct ContentView: View {
             
             if filesLoaded {
                 HStack {
-                    ForEach(stem.tracks) { track in
-                        CustomSliderView(track: track)
+                    ForEach(stem.tracks, id: \.id) { track in
+                        CustomSliderView(player: track.player)
                     }
                 }
             } else {

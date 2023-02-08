@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CustomSliderView: View {
     
-    var track: TrackModel
+    var player: AVAudioPlayer
     
     // Credits: Kavsoft - https://www.youtube.com/watch?v=wdNu0ae5gBE
     
@@ -38,7 +38,7 @@ struct CustomSliderView: View {
                 
                 let progress = sliderHeight / maxHeight
                 sliderProgress = progress <= 1.0 ? progress : 1
-                track.player.volume = Float(sliderProgress)
+                player.volume = Float(sliderProgress)
             })
                 .onEnded({ value in
                     sliderHeight = sliderHeight > maxHeight ? maxHeight : sliderHeight
@@ -47,7 +47,7 @@ struct CustomSliderView: View {
                     
                     let progress = sliderHeight / maxHeight
                     sliderProgress = progress <= 1.0 ? progress : 1
-                    track.player.volume = Float(sliderProgress)
+                    player.volume = Float(sliderProgress)
                 })
         )
     }
