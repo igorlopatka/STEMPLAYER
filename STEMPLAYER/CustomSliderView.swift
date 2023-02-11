@@ -23,12 +23,14 @@ struct CustomSliderView: View {
         ZStack(alignment: .bottom) {
             Rectangle()
                 .foregroundColor(.gray)
+                .opacity(0.5)
             Rectangle()
-                .foregroundColor(.accentColor)
+                .foregroundColor(.gray)
                 .frame(height: sliderHeight)
         }
         .frame(width: 20, height: maxHeight)
         .cornerRadius(12)
+        .padding(50)
         .gesture(DragGesture(minimumDistance: 0)
             .onChanged({ value in
                 let translation = value.translation

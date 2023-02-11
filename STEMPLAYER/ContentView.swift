@@ -28,13 +28,16 @@ struct ContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 50)
+                        .padding()
                     
+                    Spacer()
                     
                     VStack {
                         if filesLoaded {
                             HStack {
                                 ForEach(stem.tracks, id: \.id) { track in
-                                    //                        CustomSliderView(player: track.player)
+                                    CustomSliderView(player: track.player)
+                                        .foregroundColor(colorScheme == .dark ? .light : .dark)
                                 }
                             }
                         } else {
@@ -42,7 +45,7 @@ struct ContentView: View {
                                 .bold()
                         }
                     }
-                    .frame(height: geo.size.height * 0.6)
+                    .frame(height: geo.size.height * 0.5)
                     
                     
                     
@@ -54,6 +57,7 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 50, height: 50)
                                 .aspectRatio(contentMode: .fit)
+                                .foregroundColor(colorScheme == .dark ? .light : .dark)
                         }
                         .disabled(!filesLoaded)
                         .padding()
@@ -64,6 +68,8 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 45, height: 45)
                                 .aspectRatio(contentMode: .fit)
+                                .foregroundColor(colorScheme == .dark ? .light : .dark)
+                            
                         }
                         .disabled(!filesLoaded)
                         .padding()
@@ -77,7 +83,7 @@ struct ContentView: View {
                             .shadow(radius: 2)
                         
                     }
-                    .padding(.top, 30)
+                    .padding()
                 }
             }
         }
