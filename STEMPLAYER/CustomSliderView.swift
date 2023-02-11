@@ -53,8 +53,3 @@ struct CustomSliderView: View {
     }
 }
 
-//    struct StemSliderView_Previews: PreviewProvider {
-//        static var previews: some View {
-//            CustomSliderView()
-//    }
-//}
