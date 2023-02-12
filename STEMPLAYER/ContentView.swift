@@ -46,9 +46,7 @@ struct ContentView: View {
                         }
                     }
                     .frame(height: geo.size.height * 0.5)
-                    
-                    
-                    
+                    Spacer()
                     HStack {
                         Button(action: {
                             stem.togglePlayStatus()
@@ -57,7 +55,7 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 50, height: 50)
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundColor(colorScheme == .dark ? .light : .dark)
+                                .foregroundColor(colorScheme == .dark ? .dark : .light)
                         }
                         .disabled(!filesLoaded)
                         .padding()
@@ -68,7 +66,7 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 45, height: 45)
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundColor(colorScheme == .dark ? .light : .dark)
+                                .foregroundColor(colorScheme == .dark ? .dark : .light)
                             
                         }
                         .disabled(!filesLoaded)
