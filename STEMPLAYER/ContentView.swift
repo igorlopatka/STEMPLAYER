@@ -55,7 +55,7 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 50, height: 50)
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundColor(colorScheme == .dark ? .dark : .light)
+                                .foregroundColor(.dark)
                         }
                         .disabled(!filesLoaded)
                         .padding()
@@ -66,7 +66,7 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 45, height: 45)
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundColor(colorScheme == .dark ? .dark : .light)
+                                .foregroundColor(.dark)
                             
                         }
                         .disabled(!filesLoaded)
