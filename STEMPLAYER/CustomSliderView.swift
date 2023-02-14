@@ -28,9 +28,9 @@ struct CustomSliderView: View {
                 .foregroundColor(.gray)
                 .frame(height: sliderHeight)
         }
-        .frame(width: 20, height: maxHeight)
+        .frame(width: 50, height: maxHeight)
         .cornerRadius(12)
-        .padding(50)
+        .padding(20)
         .gesture(DragGesture(minimumDistance: 0)
             .onChanged({ value in
                 let translation = value.translation
