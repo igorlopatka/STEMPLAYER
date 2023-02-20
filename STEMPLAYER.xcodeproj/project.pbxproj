@@ -14,9 +14,20 @@
 		451362A72953ADFF0000D539 /* StemPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */; };
 		453CF0F02954D65900434B2D /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0EF2954D65900434B2D /* CustomSliderView.swift */; };
 		453CF0F42954E2E200434B2D /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF0F32954E2E200434B2D /* TrackModel.swift */; };
+		4557C31429A40FD800BDD421 /* STEMPLAYERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557C31329A40FD800BDD421 /* STEMPLAYERTests.swift */; };
 		458D5DBD2997A9980092D755 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D5DBC2997A9980092D755 /* Color+Extension.swift */; };
 		45AD51222995727E00E403AB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AD51212995727E00E403AB /* Colors.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4557C31529A40FD800BDD421 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4513628D2953ADE30000D539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 451362942953ADE30000D539;
+			remoteInfo = STEMPLAYER;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		451362952953ADE30000D539 /* STEMPLAYER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STEMPLAYER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,12 +38,21 @@
 		451362A62953ADFF0000D539 /* StemPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemPlayerViewModel.swift; sourceTree = "<group>"; };
 		453CF0EF2954D65900434B2D /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		453CF0F32954E2E200434B2D /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
+		4557C31129A40FD800BDD421 /* STEMPLAYERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STEMPLAYERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4557C31329A40FD800BDD421 /* STEMPLAYERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STEMPLAYERTests.swift; sourceTree = "<group>"; };
 		458D5DBC2997A9980092D755 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		45AD51212995727E00E403AB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		451362922953ADE30000D539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4557C30E29A40FD800BDD421 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				451362972953ADE30000D539 /* STEMPLAYER */,
+				4557C31229A40FD800BDD421 /* STEMPLAYERTests */,
 				451362962953ADE30000D539 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				451362952953ADE30000D539 /* STEMPLAYER.app */,
+				4557C31129A40FD800BDD421 /* STEMPLAYERTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +104,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4557C31229A40FD800BDD421 /* STEMPLAYERTests */ = {
+			isa = PBXGroup;
+			children = (
+				4557C31329A40FD800BDD421 /* STEMPLAYERTests.swift */,
+			);
+			path = STEMPLAYERTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +132,24 @@
 			productReference = 451362952953ADE30000D539 /* STEMPLAYER.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4557C31029A40FD800BDD421 /* STEMPLAYERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4557C31929A40FD800BDD421 /* Build configuration list for PBXNativeTarget "STEMPLAYERTests" */;
+			buildPhases = (
+				4557C30D29A40FD800BDD421 /* Sources */,
+				4557C30E29A40FD800BDD421 /* Frameworks */,
+				4557C30F29A40FD800BDD421 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4557C31629A40FD800BDD421 /* PBXTargetDependency */,
+			);
+			name = STEMPLAYERTests;
+			productName = STEMPLAYERTests;
+			productReference = 4557C31129A40FD800BDD421 /* STEMPLAYERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,6 +162,10 @@
 				TargetAttributes = {
 					451362942953ADE30000D539 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					4557C31029A40FD800BDD421 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 451362942953ADE30000D539;
 					};
 				};
 			};
@@ -131,6 +183,7 @@
 			projectRoot = "";
 			targets = (
 				451362942953ADE30000D539 /* STEMPLAYER */,
+				4557C31029A40FD800BDD421 /* STEMPLAYERTests */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +196,13 @@
 				45AD51222995727E00E403AB /* Colors.xcassets in Resources */,
 				451362A02953ADE40000D539 /* Preview Assets.xcassets in Resources */,
 				4513629D2953ADE40000D539 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4557C30F29A40FD800BDD421 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +222,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4557C30D29A40FD800BDD421 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4557C31429A40FD800BDD421 /* STEMPLAYERTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4557C31629A40FD800BDD421 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 451362942953ADE30000D539 /* STEMPLAYER */;
+			targetProxy = 4557C31529A40FD800BDD421 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		451362A12953ADE40000D539 /* Debug */ = {
@@ -339,6 +415,42 @@
 			};
 			name = Release;
 		};
+		4557C31729A40FD800BDD421 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6A7T62L69W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.igorlopatka.STEMPLAYERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STEMPLAYER.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/STEMPLAYER";
+			};
+			name = Debug;
+		};
+		4557C31829A40FD800BDD421 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6A7T62L69W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.igorlopatka.STEMPLAYERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STEMPLAYER.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/STEMPLAYER";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -356,6 +468,15 @@
 			buildConfigurations = (
 				451362A42953ADE40000D539 /* Debug */,
 				451362A52953ADE40000D539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4557C31929A40FD800BDD421 /* Build configuration list for PBXNativeTarget "STEMPLAYERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4557C31729A40FD800BDD421 /* Debug */,
+				4557C31829A40FD800BDD421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
