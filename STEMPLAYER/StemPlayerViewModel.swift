@@ -55,6 +55,7 @@ import SwiftUI
                 let player = try AVAudioPlayer(contentsOf: file)
                 let track = TrackModel(fileName: file.lastPathComponent, player: player, url: file)
                 tracks.append(track)
+                stopAllTracks()
             } catch {
                 print(error.localizedDescription)
             }
