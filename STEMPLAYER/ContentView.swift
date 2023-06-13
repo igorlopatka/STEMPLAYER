@@ -90,7 +90,7 @@ struct ContentView: View {
                       allowsMultipleSelection: true) { result in
             stem.importFiles(result: result)
         }
-                      .onChange(of: stem.importedFiles) { _ in
+        .onChange(of: stem.importedFiles) { _ in
             stem.createTracks()
             if stem.importedFiles.isEmpty == false {
                 filesLoaded = true
